@@ -20,7 +20,7 @@
             let streamKey = document.getElementById("streamKey").value;
             if (streamKey) {
                 let video = document.getElementById("video");
-                let videoSrc = `http://192.168.101.200:3000/hls/${streamKey}.m3u8`;
+                let videoSrc = `http://192.168.100.200:3000/hls/${streamKey}.m3u8`;
                 if (Hls.isSupported()) {
                     let hls = new Hls();
                     hls.loadSource(videoSrc);

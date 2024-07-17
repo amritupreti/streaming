@@ -5,7 +5,7 @@ services:
     build: ./rtmp
     ports:
       - 1935:1935
-      - 3000:3000
+      - 3005:3000
     volumes:
       - ./data:/tmp/hls
     restart: always
@@ -22,8 +22,6 @@ services:
         window: 120s
   haproxy:
     image: haproxy:latest
-    ports:
-      - 5000:5000
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
     container_name: haproxy
